@@ -140,6 +140,8 @@ Vue.component('product-review', {
   </ul>
   </p>
   <p>
+  <span class="head">Add a review</span>
+  <hr> <br/>
     <label for="name">Name:</label>
     <input type="text" id="name" v-model="name" placeholder="Bolaji Ayodeji">
   </p>
@@ -166,7 +168,7 @@ Vue.component('product-review', {
   <label>No <input type="radio" value="No" v-model="recommend"/></label>
 
   <p>
-    <input type="submit" value="Submit">
+    <input v-on:keyup.enter="submit" type="submit" value="Submit">
   </p>
 
 </form>
