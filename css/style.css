@@ -127,7 +127,7 @@ input[type=submit]:hover {
 }
 
 
-.tab {
+.tab, .tabs {
   margin-left: 20px;
   cursor: pointer;
 }
