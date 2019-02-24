@@ -83,9 +83,16 @@ button {
 }
 
 .review-form {
+  margin-left: 600px;
+  margin-top: 20px;
   width: 400px;
+  height: 650px;
   padding: 20px;
   border: 1px solid #d8d8d8;
+}
+
+.reviews {
+  margin: auto;
 }
 
 input {
@@ -126,13 +133,19 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
+.tab {
+  margin-left: 300px;
+  cursor: pointer;
+}
 
-.tab, .tabs {
+.tabs {
   margin-left: 20px;
   cursor: pointer;
 }
 
 .activeTab {
+  border: 2px #000 dotted;
+  padding: 5px;
   color: #16C0B0;
   text-decoration: underline;
 }

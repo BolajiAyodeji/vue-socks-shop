@@ -18,9 +18,9 @@ Vue.component('product', {
 
       <div class="product-info">
         <h1>{{ title }}</h1>
-        <p>{{ sale }}</p>
-        <p v-if="inStock">In stock</p>
-        <p v-else :class="{ outOfStock: !inStock}">Out of stock</p>
+        <p>➡ {{ sale }}</p>
+        <p v-if="inStock">➡ In stock</p>
+        <p v-else :class="{ outOfStock: !inStock}">➡ Out of stock</p>
 
         <info-tabs :shipping="shipping" :details="details"></info-tabs>
 
@@ -143,7 +143,6 @@ Vue.component('product-review', {
   <p>
     <label for="rating">Rating:</label>
     <select id="rating" v-model.number="rating">
-      <option selected>★★★</option>
       <option>5</option>
       <option>4</option>
       <option>3</option>
@@ -212,7 +211,7 @@ Vue.component('product-tabs', {
   <span class="tab" :class="{ activeTab: selectedTab === tab }" v-for="(tab, index) in tabs" :key="index" @click="selectedTab = tab">{{ tab }}</span>
   </div>
 
-  <div v-show="selectedTab === 'Reviews'">
+  <div v-show="selectedTab === 'Reviews'" class="reviews">
   <h2>Reviews</h2>
   <p v-if="!reviews.length">There are no reviews yet.</p>
   <ul>
